@@ -1,34 +1,112 @@
+/* @settings
+
+name: Obsidian Customized Theme
+id: obsidian-customized-theme
+
+*/
+
+/* General Typography */
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #4e3629; /* Primary text color */
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+/* Icons and Visual Indicators */
+.icon {
+  color: #8f4f63; /* Accent Color */
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+/* Navigation and Sidebar */
+.sidebar {
+  background-color: #f7d2d5; /* Sidebar Background */
+  color: #4e3629; /* Sidebar Text */
 }
 
-.menu {
-	padding: var(--size-2-1);
+.sidebar a {
+  color: #8f4f63; /* Accent Text */
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+.sidebar .divider {
+  border-bottom: 1px solid #e7a1a8; /* Subtle Divider */
 }
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+/* Breadcrumbs and File Paths */
+.breadcrumb {
+  color: #8f4f63; /* Accent Text */
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.breadcrumb-divider::after {
+  content: "|";
+  color: #4e3629; /* Matches Sidebar Text */
+  margin: 0 4px;
+}
+
+.breadcrumb a:hover {
+  color: #a43f54; /* Slightly lighter accent color */
+  text-decoration: underline;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+  /* Adjust font sizes for smaller screens */
+  body {
+    font-size: 14px;
+  }
+
+  /* Add padding and margins for better spacing */
+  .container {
+    padding: 8px;
+    margin: 0 auto;
+  }
+
+  /* Ensure touch targets are appropriately sized */
+  button, .interactive-element {
+    padding: 12px 16px;
+  }
+
+  /* Sidebar adjustment for mobile */
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #f7d2d5; /* Matches your palette */
+  }
+
+  /* Hide non-essential elements */
+  .non-essential {
+    display: none;
+  }
+}
+
+/* Text Colors */
+.text-accent {
+  color: #8f4f63;
+}
+
+.text-muted {
+  color: #888888;
+}
+
+/* Background Colors */
+.background-primary {
+  background-color: #f7d2d5;
+}
+
+.background-secondary {
+  background-color: #e3e5e8;
+}
+
+/* Interactive Elements */
+.button {
+  color: #4e3629;
+  background-color: #e7a1a8;
+  border: 1px solid #8f4f63;
+}
+
+.button:hover {
+  background-color: #f7d2d5;
 }
